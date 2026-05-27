@@ -35,42 +35,59 @@ st.markdown("""
         border-right: 1px solid #2e2e3e;
     }
 
-    /* Banner clickeable */
+    /* Banner */
     .bart-banner {
-        display: block;
-        text-decoration: none;
-        background: linear-gradient(135deg, #7b0000 0%, #b71c1c 50%, #7b0000 100%);
+        background: linear-gradient(160deg, #8b0000 0%, #c62828 60%, #7b0000 100%);
         border-radius: 10px;
-        padding: 18px 16px 14px 16px;
+        padding: 20px 18px 16px 18px;
         margin-bottom: 18px;
-        box-shadow: 0 4px 18px rgba(183,28,28,0.35);
-        cursor: pointer;
-        transition: box-shadow 0.2s;
-    }
-    .bart-banner:hover {
-        box-shadow: 0 6px 28px rgba(183,28,28,0.55);
+        box-shadow: 0 4px 20px rgba(183,28,28,0.4);
     }
     .bart-banner-title {
         color: #ffffff;
-        font-size: 1.45em;
+        font-size: 2.2em;
         font-weight: 800;
-        letter-spacing: 2px;
+        letter-spacing: 6px;
         margin: 0 0 2px 0;
-        font-family: 'Georgia', serif;
+        font-family: 'Arial Black', 'Arial Bold', sans-serif;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        line-height: 1;
     }
     .bart-banner-sub {
         color: #ffcdd2;
-        font-size: 0.78em;
-        letter-spacing: 1px;
-        margin: 0;
-    }
-    .bart-banner-authors {
-        color: #ef9a9a;
         font-size: 0.72em;
-        margin-top: 10px;
+        letter-spacing: 0.3px;
+        margin: 0 0 14px 0;
+        font-family: Arial, sans-serif;
+        opacity: 0.8;
+    }
+    .bart-banner-links {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+    }
+    .bart-banner-links a {
+        color: #fff;
+        background: rgba(255,255,255,0.13);
+        border: 1px solid rgba(255,255,255,0.22);
+        border-radius: 20px;
+        padding: 3px 12px;
+        font-size: 0.7em;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        letter-spacing: 0.3px;
+        transition: background 0.2s;
+    }
+    .bart-banner-links a:hover { background: rgba(255,255,255,0.26); }
+    .bart-banner-authors {
+        color: #ffcdd2;
+        font-size: 0.7em;
         border-top: 1px solid rgba(255,255,255,0.15);
-        padding-top: 8px;
-        line-height: 1.7;
+        padding-top: 10px;
+        line-height: 2;
+        font-family: Arial, sans-serif;
+        opacity: 0.85;
     }
 
     /* Cajas de contenido */
@@ -124,17 +141,21 @@ model, tokenizer, device = get_model()
 
 # ── Sidebar ──────────────────────────────────────────────────────────────────
 with st.sidebar:
-    # Banner clickeable → HuggingFace
+    # Banner lateral
     st.markdown("""
-    <a class="bart-banner" href="https://huggingface.co/facebook/bart-large-cnn" target="_blank">
+    <div class="bart-banner">
         <p class="bart-banner-title">BART</p>
-        <p class="bart-banner-sub">facebook/bart-large-cnn · 406M params</p>
-        <p class="bart-banner-authors">
+        <p class="bart-banner-sub">Denoising Seq2Seq Pre-training · 406M params</p>
+        <div class="bart-banner-links">
+            <a href="https://huggingface.co/papers/1910.13461" target="_blank">📄 Artículo</a>
+            <a href="https://huggingface.co/facebook/bart-large-cnn" target="_blank">🤗 Pesos</a>
+        </div>
+        <div class="bart-banner-authors">
             Juan Esteban Espitia<br>
             Daniel Fernando Mejía<br>
             Rubén Darío Salcedo
-        </p>
-    </a>
+        </div>
+    </div>
     """, unsafe_allow_html=True)
 
     section = st.radio(
@@ -145,8 +166,6 @@ with st.sidebar:
 
     st.divider()
     st.caption(f"Dispositivo: **{device.upper()}**")
-    st.caption("📄 [Paper arXiv:1910.13461](https://arxiv.org/abs/1910.13461)")
-    st.caption("🤗 [Modelo en HuggingFace](https://huggingface.co/facebook/bart-large-cnn)")
 
 
 # ╔══════════════════════════════════════════════════════════════════╗
@@ -175,10 +194,10 @@ if section == "🧭 Contexto":
         <p>
         <strong style="color:#ef9a9a">BART: Denoising Sequence-to-Sequence Pre-training for Natural Language
         Generation, Translation, and Comprehension</strong><br>
-        Lewis et al., 2019 — <a href="https://arxiv.org/abs/1910.13461" style="color:#ef5350">arXiv:1910.13461</a><br><br>
-        Aprobado por la docente: <em>"Es una de las mejores opciones porque la arquitectura
-        encoder–decoder está muy clara. Permite explicar encoder bidireccional, decoder autoregresivo,
-        self-attention, cross-attention, Q/K/V y preentrenamiento denoising."</em>
+        Lewis et al., 2019 ·
+        <a href="https://huggingface.co/papers/1910.13461" style="color:#ef5350" target="_blank">Artículo</a>
+        &nbsp;·&nbsp;
+        <a href="https://huggingface.co/facebook/bart-large-cnn" style="color:#ef5350" target="_blank">Pesos preentrenados</a>
         </p>
     </div>
     """, unsafe_allow_html=True)
