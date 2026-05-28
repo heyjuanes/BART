@@ -427,33 +427,33 @@ La aplicación tiene 5 secciones:
 
 ### 6.2 Ejemplo de sumarización
 
-**Texto de entrada** (83 palabras):
+**Texto de entrada** 
 ```
-Researchers at MIT have developed a new artificial intelligence system capable
-of detecting early signs of Alzheimer's disease up to six years before a clinical
-diagnosis. The model analyzes speech patterns and linguistic features from routine
-conversations, identifying subtle changes in vocabulary complexity, sentence structure,
-and word-finding pauses that often precede cognitive decline. In a study involving
-over 1,000 participants tracked for a decade, the system achieved an accuracy of
-87 percent. The team hopes the technology could be integrated into smartphone
-applications, enabling widespread and non-invasive screening.
+Researchers at MIT have developed a new artificial intelligence system capable of detecting early signs of Alzheimer's disease up to six years before a clinical diagnosis. The model analyzes speech patterns and linguistic features from routine conversations, identifying subtle changes in vocabulary complexity, sentence structure, and word-finding pauses that often precede cognitive decline. In a study involving over 1,000 participants tracked for a decade, the system achieved an accuracy of 87 percent. The team hopes the technology could be integrated into smartphone applications, enabling widespread and non-invasive screening.
 ```
 
-**Resumen generado por BART** (~35 palabras):
+**Resumen generado por BART**
 ```
-Researchers at MIT have developed an AI system that can detect early signs of
-Alzheimer's disease up to six years before a clinical diagnosis. The system
-achieved an accuracy of 87 percent in a study involving over 1,000 participants.
+Researchers at MIT have developed a new artificial intelligence system capable of detecting early signs of Alzheimer's disease up to six years before a clinical diagnosis. The model analyzes speech patterns and linguistic features from routine conversations. In a study involving over 1,000 participants tracked for a decade, the system achieved an accuracy of 87 percent.
 ```
 
 **Métricas de compresión**:
 - Palabras originales: 83 → Palabras del resumen: ~35
 - Compresión: ~58%
-- El resumen reformula (no copia) las ideas principales del texto original
+- El modelo preserva las ideas más importantes del texto original.
+- En textos cortos y bien estructurados, BART tiende a conservar
+  el lenguaje original en lugar de reformularlo (el resumen es más
+  extractivo que abstractivo). La reformulación real emerge en
+  textos más complejos y largos.
 
-> 📸 **Nota para el README final**: Agrega capturas de pantalla de tu app corriendo en esta sección. Puedes usar `st.image()` internamente o simplemente hacer screenshots de cada sección de la interfaz. Sugerencia: captura la sección de sumarización con el ejemplo anterior, la visualización de atención del encoder, y la tabla ROUGE.
+<img width="1600" height="828" alt="img1" src="https://github.com/user-attachments/assets/6c5ab96e-c09e-45c1-bd0b-d76bb2689914" />
+<img width="1600" height="827" alt="img2" src="https://github.com/user-attachments/assets/1f58fde5-b806-4720-a85d-2be897ca36e1" />
+<img width="1600" height="830" alt="img3" src="https://github.com/user-attachments/assets/0e90f79b-7825-4b19-ab33-81c551d5996b" />
+<img width="1600" height="830" alt="img4" src="https://github.com/user-attachments/assets/3859da0d-c8f7-47c7-90d5-89d1060ba56f" />
+<img width="1600" height="702" alt="img5" src="https://github.com/user-attachments/assets/85e41e0b-24fc-4eba-aaf8-ef8abc4dddb6" />
 
 ### 6.3 Visualizaciones de atención
+
 
 #### Encoder Self-Attention (por cabeza)
 
