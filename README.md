@@ -539,18 +539,14 @@ Los resultados superan el benchmark porque las muestras de prueba son textos cor
 
 [3] J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding," in *Proc. NAACL-HLT 2019*, pp. 4171–4186, 2019. [Online]. Available: https://arxiv.org/abs/1810.04805
 
-[4] A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, and I. Sutskever, "Language Models are Unsupervised Multitask Learners," *OpenAI Blog*, 2019. [Online]. Available: https://openai.com/research/gpt-2
+[4] R. Sennrich, B. Haddow, and A. Birch, "Neural Machine Translation of Rare Words with Subword Units," in *Proc. ACL 2016*, pp. 1715–1725, 2016. [Online]. Available: https://arxiv.org/abs/1508.04025
 
-[5] R. Sennrich, B. Haddow, and A. Birch, "Neural Machine Translation of Rare Words with Subword Units," in *Proc. ACL 2016*, pp. 1715–1725, 2016. [Online]. Available: https://arxiv.org/abs/1508.04025
+[5] C.-Y. Lin, "ROUGE: A Package for Automatic Evaluation of Summaries," in *Proc. ACL Workshop on Text Summarization Branches Out*, 2004, pp. 74–81. [Online]. Available: https://aclanthology.org/W04-1013
 
-[6] C.-Y. Lin, "ROUGE: A Package for Automatic Evaluation of Summaries," in *Proc. ACL Workshop on Text Summarization Branches Out*, 2004, pp. 74–81. [Online]. Available: https://aclanthology.org/W04-1013
+[6] Facebook AI, "facebook/bart-large-cnn," Hugging Face Model Hub, 2020. [Online]. Available: https://huggingface.co/facebook/bart-large-cnn
 
-[7] Facebook AI, "facebook/bart-large-cnn," Hugging Face Model Hub, 2020. [Online]. Available: https://huggingface.co/facebook/bart-large-cnn
+[7] T. Wolf *et al.*, "Transformers: State-of-the-Art Natural Language Processing," in *Proc. EMNLP 2020 (System Demonstrations)*, pp. 38–45, 2020. [Online]. Available: https://arxiv.org/abs/1910.03771
 
-[8] T. Wolf *et al.*, "Transformers: State-of-the-Art Natural Language Processing," in *Proc. EMNLP 2020 (System Demonstrations)*, pp. 38–45, 2020. [Online]. Available: https://arxiv.org/abs/1910.03771
-
-[9] K. M. Hermann *et al.*, "Teaching Machines to Read and Comprehend," in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 28, 2015. [Online]. Available: https://arxiv.org/abs/1506.03340
+[8] K. M. Hermann *et al.*, "Teaching Machines to Read and Comprehend," in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 28, 2015. [Online]. Available: https://arxiv.org/abs/1506.03340
 
 ---
-
-*Proyecto desarrollado en el curso Procesamiento de Datos Secuenciales. Los pesos del modelo pertenecen a Meta AI y se distribuyen bajo su licencia correspondiente.*
